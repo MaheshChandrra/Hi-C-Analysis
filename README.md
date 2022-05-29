@@ -1,6 +1,6 @@
 # Hi-C-Analysis 
 
-This repo discusses on dealing with Hi-c data and operations on the data. Hi-C measures the frequency (as an average over a cell population) at which two DNA fragments physically associate in 3D space, linking chromosomal structure directly to the genomic sequence.
+This repo discusses on dealing with Hi-c data and operations on the data. About Hi-C,it measures the frequency (as an average over a cell population) at which two DNA fragments physically associate in 3D space, linking chromosomal structure directly to the genomic sequence.
 
 ## Introduction
 The code covers on applying the below operations on Hi-c data:
