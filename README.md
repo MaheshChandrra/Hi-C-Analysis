@@ -41,10 +41,6 @@ wget -O examples.zip "https://keeper.mpdl.mpg.de/d/147906745b634c779ed3/files/?p
 unzip examples.zip
 cd examples
 
-fanc auto SRR4271982_chr18_19_1.fastq.gzip SRR4271982_chr18_19_2.fastq.gzip output/ \
-          -g hg19_chr18_19.fa -i hg19_chr18_19/hg19_chr18_19 -n fanc_example -t 4 -r HindIII \
-          --split-ligation-junction -q 30 --run-with test
-
 
 sudo apt install bowtie2
 ```
@@ -52,4 +48,13 @@ sudo apt install bowtie2
 
 ```pip install -r requirements.txt```
 
+## Sequence to Map Conversion
+* For fastq sequences
+```
+fanc auto SRR4271982_chr18_19_1.fastq.gzip SRR4271982_chr18_19_2.fastq.gzip output/ \
+          -g hg19_chr18_19.fa -i hg19_chr18_19/hg19_chr18_19 -n fanc_example -t 4 -r HindIII \
+          --split-ligation-junction -q 30 --run-with test
+```
+* For single hic file
 
+```fanc auto examples/test.hic ./example_output/ ```
