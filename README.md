@@ -34,7 +34,7 @@ cd hdf5-1.10.5.tar.gz/
 make
 make install
 
-#export HDF5_DIR=/path/to/hdf5/dir
+export HDF5_DIR=/path/to/hdf5/dir
 
 
 wget -O examples.zip "https://keeper.mpdl.mpg.de/d/147906745b634c779ed3/files/?p=/examples.zip&dl=1"
