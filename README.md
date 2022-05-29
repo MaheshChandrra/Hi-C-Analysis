@@ -11,6 +11,8 @@ The code covers on applying the below operations on Hi-c data:
 ## Setup
 
 Linux/Unix setup:
+* Linux Environment setup
+
 ```
 sudo apt-get update 
 
@@ -46,5 +48,8 @@ fanc auto SRR4271982_chr18_19_1.fastq.gzip SRR4271982_chr18_19_2.fastq.gzip outp
 
 sudo apt install bowtie2
 ```
+* Python environment setup
+
+```pip install -r requirements.txt```
 
 
