@@ -1,0 +1,6 @@
+pip uninstall fanc
+pip uninstall pysam
+pip install Cython
+pip install pysam
+pip install fanc
+pip install sphinx sphinx_rtd_theme sphinx-argparse

@@ -1,0 +1,597 @@
+mahesh@WINDOWS-KMOT8DP:/mnt/c/Users/user1/Documents/Hi-C Classification/examples$ fanc auto SRR4271982_chr18_19_1.fastq.gzip SRR4271982_chr18_19_2.fastq.gzip           ./example_output/ -i bwa-index/hg19_chr18_19.fa           -g hg19_chr18_19_re_fragments.bed
+2022-05-28 14:46:18,582 INFO FAN-C version: 0.9.24
+2022-05-28 14:46:18,618 INFO Getting regions
+2022-05-28 14:46:18,633 INFO Output folder: ./example_output/
+2022-05-28 14:46:18,633 INFO Input files: SRR4271982_chr18_19_1.fastq.gzip, SRR4271982_chr18_19_2.fastq.gzip
+2022-05-28 14:46:18,634 INFO Input file types: fastq, fastq
+2022-05-28 14:46:18,634 INFO Final basename: SRR4271982_chr18_19 (you can change this with the -n option!)
+2022-05-28 14:46:18,634 INFO Creating output folders...
+2022-05-28 14:46:22,079 INFO FAN-C version: 0.9.24
+2022-05-28 14:46:22,094 INFO Starting mapping for SRR4271982_chr18_19_1.fastq.gzip
+2022-05-28 14:46:22,153 INFO Starting to output alignments to intermediate SAM file /tmp/tmpm_j03tem/intermediate.sam
+2022-05-28 14:51:27,631 INFO Converting intermediate SAM file to BAM (./example_output/sam/SRR4271982_chr18_19_1.bam)
+2022-05-28 14:51:55,018 INFO Success, removing intermediate.
+2022-05-28 14:51:58,334 INFO FAN-C version: 0.9.24
+2022-05-28 14:51:58,343 INFO Starting mapping for SRR4271982_chr18_19_2.fastq.gzip
+2022-05-28 14:51:58,406 INFO Starting to output alignments to intermediate SAM file /tmp/tmp5qbv_s68/intermediate.sam
+2022-05-28 14:57:07,109 INFO Converting intermediate SAM file to BAM (./example_output/sam/SRR4271982_chr18_19_2.bam)
+2022-05-28 14:57:50,736 INFO Success, removing intermediate.
+2022-05-28 14:57:56,304 INFO FAN-C version: 0.9.24
+2022-05-28 14:57:56,360 INFO Cannot find sambamba on this machine, falling back to samtools sort. This is not a problem, but if you want to speed up your SAM/BAM file sorting, install sambamba and ensure it is in your PATH!
+2022-05-28 14:59:06,282 INFO Replacing input SAM/BAM file ./example_output/sam/SRR4271982_chr18_19_1.bam with sorted version...
+2022-05-28 14:59:11,902 INFO FAN-C version: 0.9.24
+2022-05-28 14:59:11,956 INFO Cannot find sambamba on this machine, falling back to samtools sort. This is not a problem, but if you want to speed up your SAM/BAM file sorting, install sambamba and ensure it is in your PATH!
+2022-05-28 15:00:08,180 INFO Replacing input SAM/BAM file ./example_output/sam/SRR4271982_chr18_19_2.bam with sorted version...
+2022-05-28 15:00:14,472 INFO FAN-C version: 0.9.24
+2022-05-28 15:00:14,474 INFO Getting genome regions (fragments or bins)
+2022-05-28 15:00:14,474 INFO Getting regions
+2022-05-28 15:00:14,491 INFO Three arguments detected, assuming SAM/BAM input.
+[E::idx_find_and_load] Could not retrieve index file for './example_output/sam/SRR4271982_chr18_19_1.bam'
+2022-05-28 15:00:14,496 INFO Using filters appropriate for BWA.
+[E::idx_find_and_load] Could not retrieve index file for './example_output/sam/SRR4271982_chr18_19_1.bam'
+[E::idx_find_and_load] Could not retrieve index file for './example_output/sam/SRR4271982_chr18_19_2.bam'
+Buffers 100% (630 of 630) |#####################################################################################################################################| Elapsed Time: 0:00:06 Time:  0:00:06
+2022-05-28 15:06:17,524 INFO Updating region mappability
+Mappability 100% (2046456 of 2046456) |#########################################################################################################################| Elapsed Time: 0:00:28 Time:  0:00:28
+2022-05-28 15:07:08,950 INFO All done.
+2022-05-28 15:07:14,285 INFO FAN-C version: 0.9.24
+2022-05-28 15:07:14,287 INFO One argument received, assuming existing Pairs object.
+2022-05-28 15:07:14,463 INFO Filtering reads with RE distance > 10000bp
+2022-05-28 15:07:14,466 INFO Filtering self-ligated read pairs
+2022-05-28 15:07:14,468 INFO Filtering PCR duplicates, threshold <= 2bp
+2022-05-28 15:07:47,350 INFO PCR duplicate stats: 210927 (10.3%) of pairs marked as duplicate.  (multiplicity:occurances) 3:17111 2:170119 4:1696 5:216 10:5 12:2 6:49 8:11 7:18 9:4 11:1 15:1
+2022-05-28 15:07:47,350 INFO Running filters...
+Filter 100% (630 of 630) |######################################################################################################################################| Elapsed Time: 0:01:21 Time:  0:01:21
+2022-05-28 15:09:30,730 INFO Total: 2046456. Valid: 981229
+2022-05-28 15:09:30,730 INFO Updating region mappability
+Mappability 100% (981229 of 981229) |###########################################################################################################################| Elapsed Time: 0:00:20 Time:  0:00:20
+2022-05-28 15:10:10,257 INFO Done.
+2022-05-28 15:10:50,730 INFO Saving statistics...
+2022-05-28 15:10:51,252 INFO All done.
+2022-05-28 15:10:54,773 INFO FAN-C version: 0.9.24
+2022-05-28 15:10:54,774 INFO One argument received, assuming existing Pairs object.
+Ligation error 100% (2046456 of 2046456) |######################################################################################################################| Elapsed Time: 0:00:46 Time:  0:00:46
+2022-05-28 15:12:19,539 INFO Pairs: 981229
+2022-05-28 15:12:19,539 INFO Inter-chromosomal: 139186
+2022-05-28 15:12:19,539 INFO Same fragment: 925594
+2022-05-28 15:12:19,539 INFO Same: 417664
+2022-05-28 15:12:19,540 INFO Inward: 217804
+2022-05-28 15:12:19,540 INFO Outward: 208669
+2022-05-28 15:12:22,099 INFO All done.
+2022-05-28 15:12:25,537 INFO FAN-C version: 0.9.24
+2022-05-28 15:12:25,539 INFO One argument received, assuming existing Pairs object.
+/home/mahesh/.local/lib/python3.8/site-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+2022-05-28 15:12:30,062 INFO All done.
+2022-05-28 15:12:33,556 INFO FAN-C version: 0.9.24
+2022-05-28 15:12:33,675 INFO Converting Pairs files
+2022-05-28 15:12:33,771 INFO Converting ./example_output/pairs/SRR4271982_chr18_19.pairs to Hic
+Hi-C convert 100% (981229 of 981229) |##########################################################################################################################| Elapsed Time: 0:00:35 Time:  0:00:35
+2022-05-28 15:13:40,317 INFO FAN-C version: 0.9.24
+2022-05-28 15:13:40,471 INFO Binning Hic file (5000000)
+2022-05-28 15:13:40,471 INFO Constructing binned genome...
+2022-05-28 15:13:40,705 INFO Binning edges...
+2022-05-28 15:13:40,787 INFO Binning Hi-C contacts
+2022-05-28 15:13:41,144 INFO Launching processes
+2022-05-28 15:13:44,562 INFO Submitting partitions
+2022-05-28 15:13:44,570 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (406 of 406) |####################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:11,659 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:14:11,670 INFO Final absolute cutoff threshold is 5.225e+03
+2022-05-28 15:14:11,671 INFO Selected a total of 0 (0.0%) regions to be masked
+2022-05-28 15:14:11,671 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:11,683 INFO Total: 406. Filtered: 0
+Expected 100% (406 of 406) |####################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:11,710 INFO Done.
+2022-05-28 15:14:12,169 INFO Saving statistics...
+2022-05-28 15:14:12,433 INFO Normalising binned Hic file
+Expected 100% (406 of 406) |####################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:14:16,073 INFO FAN-C version: 0.9.24
+2022-05-28 15:14:16,247 INFO Binning Hic file (2000000)
+2022-05-28 15:14:16,248 INFO Constructing binned genome...
+2022-05-28 15:14:16,472 INFO Binning edges...
+2022-05-28 15:14:16,544 INFO Binning Hi-C contacts
+2022-05-28 15:14:16,870 INFO Launching processes
+2022-05-28 15:14:20,956 INFO Submitting partitions
+2022-05-28 15:14:20,967 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (2396 of 2396) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:41,557 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:14:41,581 INFO Final absolute cutoff threshold is 2.464e+03
+2022-05-28 15:14:41,581 INFO Selected a total of 2 (2.9%) regions to be masked
+2022-05-28 15:14:41,581 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:41,597 INFO Total: 2396. Filtered: 50
+Expected 100% (2346 of 2346) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:41,646 INFO Done.
+2022-05-28 15:14:42,183 INFO Saving statistics...
+2022-05-28 15:14:42,461 INFO Normalising binned Hic file
+Expected 100% (2346 of 2346) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:14:46,072 INFO FAN-C version: 0.9.24
+2022-05-28 15:14:46,261 INFO Binning Hic file (1000000)
+2022-05-28 15:14:46,261 INFO Constructing binned genome...
+2022-05-28 15:14:46,504 INFO Binning edges...
+2022-05-28 15:14:46,578 INFO Binning Hi-C contacts
+2022-05-28 15:14:46,867 INFO Launching processes
+2022-05-28 15:14:49,949 INFO Submitting partitions
+2022-05-28 15:14:49,962 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (9113 of 9113) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:12,183 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:15:12,247 INFO Final absolute cutoff threshold is 1.307e+03
+2022-05-28 15:15:12,247 INFO Selected a total of 6 (4.3%) regions to be masked
+2022-05-28 15:15:12,247 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:12,281 INFO Total: 9113. Filtered: 202
+Expected 100% (8911 of 8911) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:12,390 INFO Done.
+2022-05-28 15:15:12,874 INFO Saving statistics...
+2022-05-28 15:15:13,136 INFO Normalising binned Hic file
+Expected 100% (8911 of 8911) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:15:17,063 INFO FAN-C version: 0.9.24
+2022-05-28 15:15:17,255 INFO Binning Hic file (500000)
+2022-05-28 15:15:17,255 INFO Constructing binned genome...
+2022-05-28 15:15:17,484 INFO Binning edges...
+2022-05-28 15:15:17,563 INFO Binning Hi-C contacts
+2022-05-28 15:15:17,880 INFO Launching processes
+2022-05-28 15:15:21,061 INFO Submitting partitions
+2022-05-28 15:15:21,076 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (34953 of 34953) |################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:45,834 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:15:46,066 INFO Final absolute cutoff threshold is 682.8
+2022-05-28 15:15:46,066 INFO Selected a total of 12 (4.3%) regions to be masked
+2022-05-28 15:15:46,067 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:46,181 INFO Total: 34953. Filtered: 87
+Expected 100% (34866 of 34866) |################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:46,571 INFO Done.
+2022-05-28 15:15:47,201 INFO Saving statistics...
+2022-05-28 15:15:47,551 INFO Normalising binned Hic file
+Expected 100% (34866 of 34866) |################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:15:51,989 INFO FAN-C version: 0.9.24
+2022-05-28 15:15:52,234 INFO Binning Hic file (250000)
+2022-05-28 15:15:52,234 INFO Constructing binned genome...
+2022-05-28 15:15:52,488 INFO Binning edges...
+2022-05-28 15:15:52,582 INFO Binning Hi-C contacts
+2022-05-28 15:15:52,912 INFO Launching processes
+2022-05-28 15:15:57,590 INFO Submitting partitions
+2022-05-28 15:15:57,605 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (123156 of 123156) |##############################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:16:25,893 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:16:26,891 INFO Final absolute cutoff threshold is 352.1
+2022-05-28 15:16:26,892 INFO Selected a total of 24 (4.4%) regions to be masked
+2022-05-28 15:16:26,892 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:16:27,170 INFO Total: 123156. Filtered: 101
+Expected 100% (123055 of 123055) |##############################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+2022-05-28 15:16:28,298 INFO Done.
+2022-05-28 15:16:29,051 INFO Saving statistics...
+2022-05-28 15:16:29,505 INFO Normalising binned Hic file
+Expected 100% (123055 of 123055) |##############################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:16:35,978 INFO FAN-C version: 0.9.24
+2022-05-28 15:16:36,184 INFO Binning Hic file (100000)
+2022-05-28 15:16:36,184 INFO Constructing binned genome...
+2022-05-28 15:16:36,455 INFO Binning edges...
+2022-05-28 15:16:36,543 INFO Binning Hi-C contacts
+2022-05-28 15:16:36,947 INFO Launching processes
+2022-05-28 15:16:40,491 INFO Submitting partitions
+2022-05-28 15:16:40,505 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (3 of 3) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (376465 of 376465) |##############################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+2022-05-28 15:17:27,528 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:17:29,699 INFO Final absolute cutoff threshold is 138.8
+2022-05-28 15:17:29,699 INFO Selected a total of 63 (4.6%) regions to be masked
+2022-05-28 15:17:29,699 INFO Running filters...
+Filter 100% (3 of 3) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:17:30,878 INFO Total: 376465. Filtered: 223
+Expected 100% (376242 of 376242) |##############################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+2022-05-28 15:17:33,115 INFO Done.
+2022-05-28 15:17:33,701 INFO Saving statistics...
+2022-05-28 15:17:33,984 INFO Normalising binned Hic file
+Expected 100% (376242 of 376242) |##############################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:17:44,379 INFO FAN-C version: 0.9.24
+2022-05-28 15:17:44,663 INFO Binning Hic file (50000)
+2022-05-28 15:17:44,663 INFO Constructing binned genome...
+2022-05-28 15:17:44,988 INFO Binning edges...
+2022-05-28 15:17:45,116 INFO Binning Hi-C contacts
+2022-05-28 15:17:45,484 INFO Launching processes
+2022-05-28 15:17:49,180 INFO Submitting partitions
+2022-05-28 15:17:49,193 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (6 of 6) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (570991 of 570991) |##############################################################################################################################| Elapsed Time: 0:00:04 Time:  0:00:04
+2022-05-28 15:18:24,673 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:18:27,951 INFO Final absolute cutoff threshold is 68.4
+2022-05-28 15:18:27,952 INFO Selected a total of 139 (5.1%) regions to be masked
+2022-05-28 15:18:27,952 INFO Running filters...
+Filter 100% (6 of 6) |##########################################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+2022-05-28 15:18:29,837 INFO Total: 570991. Filtered: 463
+Expected 100% (570528 of 570528) |##############################################################################################################################| Elapsed Time: 0:00:03 Time:  0:00:03
+2022-05-28 15:18:33,613 INFO Done.
+2022-05-28 15:18:34,340 INFO Saving statistics...
+2022-05-28 15:18:34,713 INFO Normalising binned Hic file
+Expected 100% (570528 of 570528) |##############################################################################################################################| Elapsed Time: 0:00:03 Time:  0:00:03
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:18:49,304 INFO FAN-C version: 0.9.24
+2022-05-28 15:18:49,618 INFO Binning Hic file (25000)
+2022-05-28 15:18:49,618 INFO Constructing binned genome...
+2022-05-28 15:18:49,928 INFO Binning edges...
+2022-05-28 15:18:50,102 INFO Binning Hi-C contacts
+2022-05-28 15:18:50,580 INFO Launching processes
+2022-05-28 15:18:55,147 INFO Submitting partitions
+2022-05-28 15:18:55,162 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (21 of 21) |#######################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (709432 of 709432) |##############################################################################################################################| Elapsed Time: 0:00:05 Time:  0:00:05
+2022-05-28 15:32:05,461 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:32:10,129 INFO Final absolute cutoff threshold is 34.1
+2022-05-28 15:32:10,130 INFO Selected a total of 339 (6.2%) regions to be masked
+2022-05-28 15:32:10,131 INFO Running filters...
+Filter 100% (21 of 21) |########################################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+2022-05-28 15:32:12,653 INFO Total: 709432. Filtered: 208
+Expected 100% (709224 of 709224) |##############################################################################################################################| Elapsed Time: 0:00:05 Time:  0:00:05
+2022-05-28 15:32:18,537 INFO Done.
+2022-05-28 15:32:19,386 INFO Saving statistics...
+2022-05-28 15:32:19,720 INFO Normalising binned Hic file
+Expected 100% (709224 of 709224) |##############################################################################################################################| Elapsed Time: 0:00:04 Time:  0:00:04
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:32:36,850 INFO FAN-C version: 0.9.24
+2022-05-28 15:32:37,130 INFO Binning Hic file (10000)
+2022-05-28 15:32:37,130 INFO Constructing binned genome...
+2022-05-28 15:32:37,687 INFO Binning edges...
+2022-05-28 15:32:38,000 INFO Binning Hi-C contacts
+2022-05-28 15:32:38,525 INFO Launching processes
+2022-05-28 15:32:42,183 INFO Submitting partitions
+2022-05-28 15:32:42,196 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (105 of 105) |#####################################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+Expected 100% (815960 of 815960) |##############################################################################################################################| Elapsed Time: 0:00:09 Time:  0:00:09
+2022-05-28 15:33:40,888 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:33:50,891 INFO Final absolute cutoff threshold is 14.8
+2022-05-28 15:33:50,892 INFO Selected a total of 2170 (15.8%) regions to be masked
+2022-05-28 15:33:50,892 INFO Running filters...
+Filter 100% (105 of 105) |######################################################################################################################################| Elapsed Time: 0:00:06 Time:  0:00:06
+2022-05-28 15:34:01,352 INFO Total: 815960. Filtered: 95
+Expected 100% (815865 of 815865) |##############################################################################################################################| Elapsed Time: 0:00:08 Time:  0:00:08
+2022-05-28 15:34:12,468 INFO Done.
+2022-05-28 15:34:16,201 INFO Saving statistics...
+2022-05-28 15:34:16,445 INFO Normalising binned Hic file
+Expected 100% (815865 of 815865) |##############################################################################################################################| Elapsed Time: 0:00:08 Time:  0:00:08
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:34:57,207 INFO FAN-C version: 0.9.24
+2022-05-28 15:34:57,470 INFO Binning Hic file (5000)
+2022-05-28 15:34:57,470 INFO Constructing binned genome...
+2022-05-28 15:34:58,130 INFO Binning edges...
+2022-05-28 15:34:58,725 INFO Binning Hi-C contacts
+2022-05-28 15:34:59,249 INFO Launching processes
+2022-05-28 15:35:03,914 INFO Submitting partitions
+2022-05-28 15:35:03,929 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (406 of 406) |#####################################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+Expected 100% (859683 of 859683) |##############################################################################################################################| Elapsed Time: 0:00:15 Time:  0:00:15
+2022-05-28 15:37:47,081 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:38:06,167 INFO Final absolute cutoff threshold is 9.2
+2022-05-28 15:38:06,172 INFO Selected a total of 9410 (34.3%) regions to be masked
+2022-05-28 15:38:06,172 INFO Running filters...
+Filter 100% (406 of 406) |######################################################################################################################################| Elapsed Time: 0:00:15 Time:  0:00:15
+2022-05-28 15:38:36,916 INFO Total: 859683. Filtered: 96
+Expected 100% (859587 of 859587) |##############################################################################################################################| Elapsed Time: 0:00:18 Time:  0:00:18
+2022-05-28 15:39:04,884 INFO Done.
+2022-05-28 15:39:21,163 INFO Saving statistics...
+2022-05-28 15:39:21,475 INFO Normalising binned Hic file
+Expected 100% (859587 of 859587) |##############################################################################################################################| Elapsed Time: 0:00:37 Time:  0:00:37
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done$ fanc auto SRR4271982_chr18_19_1.fastq.gzip SRR4271982_chr18_19_2.fastq.gzip           ./example_output/ -i bwa-index/hg19_chr18_19.fa           -g hg19_chr18_19_re_fragments.bed
+2022-05-28 14:46:18,582 INFO FAN-C version: 0.9.24
+2022-05-28 14:46:18,618 INFO Getting regions
+2022-05-28 14:46:18,633 INFO Output folder: ./example_output/
+2022-05-28 14:46:18,633 INFO Input files: SRR4271982_chr18_19_1.fastq.gzip, SRR4271982_chr18_19_2.fastq.gzip
+2022-05-28 14:46:18,634 INFO Input file types: fastq, fastq
+2022-05-28 14:46:18,634 INFO Final basename: SRR4271982_chr18_19 (you can change this with the -n option!)
+2022-05-28 14:46:18,634 INFO Creating output folders...
+2022-05-28 14:46:22,079 INFO FAN-C version: 0.9.24
+2022-05-28 14:46:22,094 INFO Starting mapping for SRR4271982_chr18_19_1.fastq.gzip
+2022-05-28 14:46:22,153 INFO Starting to output alignments to intermediate SAM file /tmp/tmpm_j03tem/intermediate.sam
+2022-05-28 14:51:27,631 INFO Converting intermediate SAM file to BAM (./example_output/sam/SRR4271982_chr18_19_1.bam)
+2022-05-28 14:51:55,018 INFO Success, removing intermediate.
+2022-05-28 14:51:58,334 INFO FAN-C version: 0.9.24
+2022-05-28 14:51:58,343 INFO Starting mapping for SRR4271982_chr18_19_2.fastq.gzip
+2022-05-28 14:51:58,406 INFO Starting to output alignments to intermediate SAM file /tmp/tmp5qbv_s68/intermediate.sam
+2022-05-28 14:57:07,109 INFO Converting intermediate SAM file to BAM (./example_output/sam/SRR4271982_chr18_19_2.bam)
+2022-05-28 14:57:50,736 INFO Success, removing intermediate.
+2022-05-28 14:57:56,304 INFO FAN-C version: 0.9.24
+2022-05-28 14:57:56,360 INFO Cannot find sambamba on this machine, falling back to samtools sort. This is not a problem, but if you want to speed up your SAM/BAM file sorting, install sambamba and ensure it is in your PATH!
+2022-05-28 14:59:06,282 INFO Replacing input SAM/BAM file ./example_output/sam/SRR4271982_chr18_19_1.bam with sorted version...
+2022-05-28 14:59:11,902 INFO FAN-C version: 0.9.24
+2022-05-28 14:59:11,956 INFO Cannot find sambamba on this machine, falling back to samtools sort. This is not a problem, but if you want to speed up your SAM/BAM file sorting, install sambamba and ensure it is in your PATH!
+2022-05-28 15:00:08,180 INFO Replacing input SAM/BAM file ./example_output/sam/SRR4271982_chr18_19_2.bam with sorted version...
+2022-05-28 15:00:14,472 INFO FAN-C version: 0.9.24
+2022-05-28 15:00:14,474 INFO Getting genome regions (fragments or bins)
+2022-05-28 15:00:14,474 INFO Getting regions
+2022-05-28 15:00:14,491 INFO Three arguments detected, assuming SAM/BAM input.
+[E::idx_find_and_load] Could not retrieve index file for './example_output/sam/SRR4271982_chr18_19_1.bam'
+2022-05-28 15:00:14,496 INFO Using filters appropriate for BWA.
+[E::idx_find_and_load] Could not retrieve index file for './example_output/sam/SRR4271982_chr18_19_1.bam'
+[E::idx_find_and_load] Could not retrieve index file for './example_output/sam/SRR4271982_chr18_19_2.bam'
+Buffers 100% (630 of 630) |#####################################################################################################################################| Elapsed Time: 0:00:06 Time:  0:00:06
+2022-05-28 15:06:17,524 INFO Updating region mappability
+Mappability 100% (2046456 of 2046456) |#########################################################################################################################| Elapsed Time: 0:00:28 Time:  0:00:28
+2022-05-28 15:07:08,950 INFO All done.
+2022-05-28 15:07:14,285 INFO FAN-C version: 0.9.24
+2022-05-28 15:07:14,287 INFO One argument received, assuming existing Pairs object.
+2022-05-28 15:07:14,463 INFO Filtering reads with RE distance > 10000bp
+2022-05-28 15:07:14,466 INFO Filtering self-ligated read pairs
+2022-05-28 15:07:14,468 INFO Filtering PCR duplicates, threshold <= 2bp
+2022-05-28 15:07:47,350 INFO PCR duplicate stats: 210927 (10.3%) of pairs marked as duplicate.  (multiplicity:occurances) 3:17111 2:170119 4:1696 5:216 10:5 12:2 6:49 8:11 7:18 9:4 11:1 15:1
+2022-05-28 15:07:47,350 INFO Running filters...
+Filter 100% (630 of 630) |######################################################################################################################################| Elapsed Time: 0:01:21 Time:  0:01:21
+2022-05-28 15:09:30,730 INFO Total: 2046456. Valid: 981229
+2022-05-28 15:09:30,730 INFO Updating region mappability
+Mappability 100% (981229 of 981229) |###########################################################################################################################| Elapsed Time: 0:00:20 Time:  0:00:20
+2022-05-28 15:10:10,257 INFO Done.
+2022-05-28 15:10:50,730 INFO Saving statistics...
+2022-05-28 15:10:51,252 INFO All done.
+2022-05-28 15:10:54,773 INFO FAN-C version: 0.9.24
+2022-05-28 15:10:54,774 INFO One argument received, assuming existing Pairs object.
+Ligation error 100% (2046456 of 2046456) |######################################################################################################################| Elapsed Time: 0:00:46 Time:  0:00:46
+2022-05-28 15:12:19,539 INFO Pairs: 981229
+2022-05-28 15:12:19,539 INFO Inter-chromosomal: 139186
+2022-05-28 15:12:19,539 INFO Same fragment: 925594
+2022-05-28 15:12:19,539 INFO Same: 417664
+2022-05-28 15:12:19,540 INFO Inward: 217804
+2022-05-28 15:12:19,540 INFO Outward: 208669
+2022-05-28 15:12:22,099 INFO All done.
+2022-05-28 15:12:25,537 INFO FAN-C version: 0.9.24
+2022-05-28 15:12:25,539 INFO One argument received, assuming existing Pairs object.
+/home/mahesh/.local/lib/python3.8/site-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+2022-05-28 15:12:30,062 INFO All done.
+2022-05-28 15:12:33,556 INFO FAN-C version: 0.9.24
+2022-05-28 15:12:33,675 INFO Converting Pairs files
+2022-05-28 15:12:33,771 INFO Converting ./example_output/pairs/SRR4271982_chr18_19.pairs to Hic
+Hi-C convert 100% (981229 of 981229) |##########################################################################################################################| Elapsed Time: 0:00:35 Time:  0:00:35
+2022-05-28 15:13:40,317 INFO FAN-C version: 0.9.24
+2022-05-28 15:13:40,471 INFO Binning Hic file (5000000)
+2022-05-28 15:13:40,471 INFO Constructing binned genome...
+2022-05-28 15:13:40,705 INFO Binning edges...
+2022-05-28 15:13:40,787 INFO Binning Hi-C contacts
+2022-05-28 15:13:41,144 INFO Launching processes
+2022-05-28 15:13:44,562 INFO Submitting partitions
+2022-05-28 15:13:44,570 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (406 of 406) |####################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:11,659 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:14:11,670 INFO Final absolute cutoff threshold is 5.225e+03
+2022-05-28 15:14:11,671 INFO Selected a total of 0 (0.0%) regions to be masked
+2022-05-28 15:14:11,671 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:11,683 INFO Total: 406. Filtered: 0
+Expected 100% (406 of 406) |####################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:11,710 INFO Done.
+2022-05-28 15:14:12,169 INFO Saving statistics...
+2022-05-28 15:14:12,433 INFO Normalising binned Hic file
+Expected 100% (406 of 406) |####################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:14:16,073 INFO FAN-C version: 0.9.24
+2022-05-28 15:14:16,247 INFO Binning Hic file (2000000)
+2022-05-28 15:14:16,248 INFO Constructing binned genome...
+2022-05-28 15:14:16,472 INFO Binning edges...
+2022-05-28 15:14:16,544 INFO Binning Hi-C contacts
+2022-05-28 15:14:16,870 INFO Launching processes
+2022-05-28 15:14:20,956 INFO Submitting partitions
+2022-05-28 15:14:20,967 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (2396 of 2396) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:41,557 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:14:41,581 INFO Final absolute cutoff threshold is 2.464e+03
+2022-05-28 15:14:41,581 INFO Selected a total of 2 (2.9%) regions to be masked
+2022-05-28 15:14:41,581 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:41,597 INFO Total: 2396. Filtered: 50
+Expected 100% (2346 of 2346) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:14:41,646 INFO Done.
+2022-05-28 15:14:42,183 INFO Saving statistics...
+2022-05-28 15:14:42,461 INFO Normalising binned Hic file
+Expected 100% (2346 of 2346) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:14:46,072 INFO FAN-C version: 0.9.24
+2022-05-28 15:14:46,261 INFO Binning Hic file (1000000)
+2022-05-28 15:14:46,261 INFO Constructing binned genome...
+2022-05-28 15:14:46,504 INFO Binning edges...
+2022-05-28 15:14:46,578 INFO Binning Hi-C contacts
+2022-05-28 15:14:46,867 INFO Launching processes
+2022-05-28 15:14:49,949 INFO Submitting partitions
+2022-05-28 15:14:49,962 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (9113 of 9113) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:12,183 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:15:12,247 INFO Final absolute cutoff threshold is 1.307e+03
+2022-05-28 15:15:12,247 INFO Selected a total of 6 (4.3%) regions to be masked
+2022-05-28 15:15:12,247 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:12,281 INFO Total: 9113. Filtered: 202
+Expected 100% (8911 of 8911) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:12,390 INFO Done.
+2022-05-28 15:15:12,874 INFO Saving statistics...
+2022-05-28 15:15:13,136 INFO Normalising binned Hic file
+Expected 100% (8911 of 8911) |##################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:15:17,063 INFO FAN-C version: 0.9.24
+2022-05-28 15:15:17,255 INFO Binning Hic file (500000)
+2022-05-28 15:15:17,255 INFO Constructing binned genome...
+2022-05-28 15:15:17,484 INFO Binning edges...
+2022-05-28 15:15:17,563 INFO Binning Hi-C contacts
+2022-05-28 15:15:17,880 INFO Launching processes
+2022-05-28 15:15:21,061 INFO Submitting partitions
+2022-05-28 15:15:21,076 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (34953 of 34953) |################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:45,834 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:15:46,066 INFO Final absolute cutoff threshold is 682.8
+2022-05-28 15:15:46,066 INFO Selected a total of 12 (4.3%) regions to be masked
+2022-05-28 15:15:46,067 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:46,181 INFO Total: 34953. Filtered: 87
+Expected 100% (34866 of 34866) |################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:15:46,571 INFO Done.
+2022-05-28 15:15:47,201 INFO Saving statistics...
+2022-05-28 15:15:47,551 INFO Normalising binned Hic file
+Expected 100% (34866 of 34866) |################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:15:51,989 INFO FAN-C version: 0.9.24
+2022-05-28 15:15:52,234 INFO Binning Hic file (250000)
+2022-05-28 15:15:52,234 INFO Constructing binned genome...
+2022-05-28 15:15:52,488 INFO Binning edges...
+2022-05-28 15:15:52,582 INFO Binning Hi-C contacts
+2022-05-28 15:15:52,912 INFO Launching processes
+2022-05-28 15:15:57,590 INFO Submitting partitions
+2022-05-28 15:15:57,605 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (123156 of 123156) |##############################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:16:25,893 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:16:26,891 INFO Final absolute cutoff threshold is 352.1
+2022-05-28 15:16:26,892 INFO Selected a total of 24 (4.4%) regions to be masked
+2022-05-28 15:16:26,892 INFO Running filters...
+Filter 100% (1 of 1) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:16:27,170 INFO Total: 123156. Filtered: 101
+Expected 100% (123055 of 123055) |##############################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+2022-05-28 15:16:28,298 INFO Done.
+2022-05-28 15:16:29,051 INFO Saving statistics...
+2022-05-28 15:16:29,505 INFO Normalising binned Hic file
+Expected 100% (123055 of 123055) |##############################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:16:35,978 INFO FAN-C version: 0.9.24
+2022-05-28 15:16:36,184 INFO Binning Hic file (100000)
+2022-05-28 15:16:36,184 INFO Constructing binned genome...
+2022-05-28 15:16:36,455 INFO Binning edges...
+2022-05-28 15:16:36,543 INFO Binning Hi-C contacts
+2022-05-28 15:16:36,947 INFO Launching processes
+2022-05-28 15:16:40,491 INFO Submitting partitions
+2022-05-28 15:16:40,505 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (3 of 3) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (376465 of 376465) |##############################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+2022-05-28 15:17:27,528 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:17:29,699 INFO Final absolute cutoff threshold is 138.8
+2022-05-28 15:17:29,699 INFO Selected a total of 63 (4.6%) regions to be masked
+2022-05-28 15:17:29,699 INFO Running filters...
+Filter 100% (3 of 3) |##########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+2022-05-28 15:17:30,878 INFO Total: 376465. Filtered: 223
+Expected 100% (376242 of 376242) |##############################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+2022-05-28 15:17:33,115 INFO Done.
+2022-05-28 15:17:33,701 INFO Saving statistics...
+2022-05-28 15:17:33,984 INFO Normalising binned Hic file
+Expected 100% (376242 of 376242) |##############################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:17:44,379 INFO FAN-C version: 0.9.24
+2022-05-28 15:17:44,663 INFO Binning Hic file (50000)
+2022-05-28 15:17:44,663 INFO Constructing binned genome...
+2022-05-28 15:17:44,988 INFO Binning edges...
+2022-05-28 15:17:45,116 INFO Binning Hi-C contacts
+2022-05-28 15:17:45,484 INFO Launching processes
+2022-05-28 15:17:49,180 INFO Submitting partitions
+2022-05-28 15:17:49,193 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (6 of 6) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (570991 of 570991) |##############################################################################################################################| Elapsed Time: 0:00:04 Time:  0:00:04
+2022-05-28 15:18:24,673 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:18:27,951 INFO Final absolute cutoff threshold is 68.4
+2022-05-28 15:18:27,952 INFO Selected a total of 139 (5.1%) regions to be masked
+2022-05-28 15:18:27,952 INFO Running filters...
+Filter 100% (6 of 6) |##########################################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+2022-05-28 15:18:29,837 INFO Total: 570991. Filtered: 463
+Expected 100% (570528 of 570528) |##############################################################################################################################| Elapsed Time: 0:00:03 Time:  0:00:03
+2022-05-28 15:18:33,613 INFO Done.
+2022-05-28 15:18:34,340 INFO Saving statistics...
+2022-05-28 15:18:34,713 INFO Normalising binned Hic file
+Expected 100% (570528 of 570528) |##############################################################################################################################| Elapsed Time: 0:00:03 Time:  0:00:03
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:18:49,304 INFO FAN-C version: 0.9.24
+2022-05-28 15:18:49,618 INFO Binning Hic file (25000)
+2022-05-28 15:18:49,618 INFO Constructing binned genome...
+2022-05-28 15:18:49,928 INFO Binning edges...
+2022-05-28 15:18:50,102 INFO Binning Hi-C contacts
+2022-05-28 15:18:50,580 INFO Launching processes
+2022-05-28 15:18:55,147 INFO Submitting partitions
+2022-05-28 15:18:55,162 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (21 of 21) |#######################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Expected 100% (709432 of 709432) |##############################################################################################################################| Elapsed Time: 0:00:05 Time:  0:00:05
+2022-05-28 15:32:05,461 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:32:10,129 INFO Final absolute cutoff threshold is 34.1
+2022-05-28 15:32:10,130 INFO Selected a total of 339 (6.2%) regions to be masked
+2022-05-28 15:32:10,131 INFO Running filters...
+Filter 100% (21 of 21) |########################################################################################################################################| Elapsed Time: 0:00:02 Time:  0:00:02
+2022-05-28 15:32:12,653 INFO Total: 709432. Filtered: 208
+Expected 100% (709224 of 709224) |##############################################################################################################################| Elapsed Time: 0:00:05 Time:  0:00:05
+2022-05-28 15:32:18,537 INFO Done.
+2022-05-28 15:32:19,386 INFO Saving statistics...
+2022-05-28 15:32:19,720 INFO Normalising binned Hic file
+Expected 100% (709224 of 709224) |##############################################################################################################################| Elapsed Time: 0:00:04 Time:  0:00:04
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:32:36,850 INFO FAN-C version: 0.9.24
+2022-05-28 15:32:37,130 INFO Binning Hic file (10000)
+2022-05-28 15:32:37,130 INFO Constructing binned genome...
+2022-05-28 15:32:37,687 INFO Binning edges...
+2022-05-28 15:32:38,000 INFO Binning Hi-C contacts
+2022-05-28 15:32:38,525 INFO Launching processes
+2022-05-28 15:32:42,183 INFO Submitting partitions
+2022-05-28 15:32:42,196 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (105 of 105) |#####################################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+Expected 100% (815960 of 815960) |##############################################################################################################################| Elapsed Time: 0:00:09 Time:  0:00:09
+2022-05-28 15:33:40,888 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:33:50,891 INFO Final absolute cutoff threshold is 14.8
+2022-05-28 15:33:50,892 INFO Selected a total of 2170 (15.8%) regions to be masked
+2022-05-28 15:33:50,892 INFO Running filters...
+Filter 100% (105 of 105) |######################################################################################################################################| Elapsed Time: 0:00:06 Time:  0:00:06
+2022-05-28 15:34:01,352 INFO Total: 815960. Filtered: 95
+Expected 100% (815865 of 815865) |##############################################################################################################################| Elapsed Time: 0:00:08 Time:  0:00:08
+2022-05-28 15:34:12,468 INFO Done.
+2022-05-28 15:34:16,201 INFO Saving statistics...
+2022-05-28 15:34:16,445 INFO Normalising binned Hic file
+Expected 100% (815865 of 815865) |##############################################################################################################################| Elapsed Time: 0:00:08 Time:  0:00:08
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
+2022-05-28 15:34:57,207 INFO FAN-C version: 0.9.24
+2022-05-28 15:34:57,470 INFO Binning Hic file (5000)
+2022-05-28 15:34:57,470 INFO Constructing binned genome...
+2022-05-28 15:34:58,130 INFO Binning edges...
+2022-05-28 15:34:58,725 INFO Binning Hi-C contacts
+2022-05-28 15:34:59,249 INFO Launching processes
+2022-05-28 15:35:03,914 INFO Submitting partitions
+2022-05-28 15:35:03,929 INFO Collecting results
+Binning 100% (1 of 1) |#########################################################################################################################################| Elapsed Time: 0:00:00 Time:  0:00:00
+Buffers 100% (406 of 406) |#####################################################################################################################################| Elapsed Time: 0:00:01 Time:  0:00:01
+Expected 100% (859683 of 859683) |##############################################################################################################################| Elapsed Time: 0:00:15 Time:  0:00:15
+2022-05-28 15:37:47,081 INFO Filtering low-coverage bins using absolute cutoff 0.0, relative cutoff 10.0%
+2022-05-28 15:38:06,167 INFO Final absolute cutoff threshold is 9.2
+2022-05-28 15:38:06,172 INFO Selected a total of 9410 (34.3%) regions to be masked
+2022-05-28 15:38:06,172 INFO Running filters...
+Filter 100% (406 of 406) |######################################################################################################################################| Elapsed Time: 0:00:15 Time:  0:00:15
+2022-05-28 15:38:36,916 INFO Total: 859683. Filtered: 96
+Expected 100% (859587 of 859587) |##############################################################################################################################| Elapsed Time: 0:00:18 Time:  0:00:18
+2022-05-28 15:39:04,884 INFO Done.
+2022-05-28 15:39:21,163 INFO Saving statistics...
+2022-05-28 15:39:21,475 INFO Normalising binned Hic file
+Expected 100% (859587 of 859587) |##############################################################################################################################| Elapsed Time: 0:00:37 Time:  0:00:37
+Closing remaining open files:./example_output/hic/SRR4271982_chr18_19.hic...done
